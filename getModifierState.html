@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>getModifierState</title>
+        <style>
+            #alert{
+                color: red;
+            }
+            #main{
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>login form</legend>
+                <label>USERNAME</label>
+                <input type="">
+                <br><br><br>
+                <label>PASSWORD</label>
+                <input type="password">
+                <br>
+                <button>SUBMIT</button>
+                <br><br>
+                <div id="main">
+                <error id="alert"></error>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+    <script>
+        var x=0;
+        window.addEventListener('keyup',suraj => {
+         var x=event.getModifierState('CapsLock');
+        if(x)
+        document.getElementById('alert').innerText="WARNING! CapsLock is ON";
+        else
+        document.getElementById('alert').innerText="";});
+    </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>dateFunctions</title>
+    </head>
+    <body>
+        <b><i id="info"></i></b>
+        <br/>
+        <br/>
+        <br/>
+        <button onclick="getYear()">YEAR</button>
+        <button onclick="getMonth()">MONTH</button>
+        <button onclick="getDate()">DATE</button>
+        <button onclick="getHour()">HOUR</button>
+        <button onclick="getMin()">MINUTE</button>
+        <button onclick="getSec()">SECOND</button>
+        <button onclick="getmilli()">MILLISECOND</button>
+        <button onclick="getOverall()">OVERALL</button>
+        <button onclick="getDay()">DAY</button>
+    </body>
+    <script>
+        var date = new Date();
+        var month=["january","february","march","april","may","june","july","august","september","october","november","december"];
+        var week=["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
+        document.getElementById('info').innerText=date;
+        function getYear(){
+        document.write("<br/>Year:"+date.getFullYear());
+        }
+        function getMonth(){
+        document.write("<br/>Month:"+date.getMonth()+"("+month[date.getMonth()]+")");
+        }
+        function getDate(){
+        document.write("<br/>Date:"+date.getDate());
+        }
+        function getHour(){
+        document.write("<br/>Hour:"+date.getHours());
+        }
+        function getMin(){
+        document.write("<br/>Minute:"+date.getMinutes());
+        }
+        function getSec(){
+        document.write("<br/>Second:"+date.getSeconds());
+        }
+        function getmilli(){
+        document.write("<br/>milliSecond:"+date.getMilliseconds());
+        }
+        function getOverall(){
+        document.write("<br/>Overalltime:"+date.getTime()+" ms");
+        }
+        function getDay(){
+        document.write("<br/>Day:"+date.getDay()+"("+week[date.getDay()]+")");
+        }
+    </script>
+</html>

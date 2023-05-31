@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <style>
+        #main{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    var patt1 = /[a-z][0-9]/ig ; 
+    var patt2 = new RegExp('[a-z]+[0-9]+','ig') ; 
+    var str = "suraj007is001";
+    document. write ("<div>",patt1. exec(str),"</div>" );
+    document. write ("<div>",patt2. exec (str),"</div>");
+    document. write ("<div>",patt1. test (str),"</div>");
+    document. write ("<div>",patt2. test (str),"</div>");
+    console. log (patt2.toString());
+    
+</script>
+</html>

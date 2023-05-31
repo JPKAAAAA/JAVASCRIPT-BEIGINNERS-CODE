@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CALCULATOR</title>
+    </head>
+    <body>
+        <div>
+        <input type="number" name="one" id="one" step="any">
+        <Select id="cal">
+            <option></option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </Select>
+        <input type="number" name="two" id="two" step="any">
+      
+        <button onclick="calc()">CALCULATE</button>
+        <br>
+        <br>
+        <input type="text" name="result" id="result">
+        </div>
+    </body>
+    <script type="text/javaScript">
+        function calc()
+        {
+            var one=document.getElementById('one').value;
+            var two=document.getElementById('two').value;
+            var opr=document.getElementById('cal').value;
+            var result;
+            if(opr=='+')
+            {
+                result=parseInt(one)+parseInt(two);
+                document.getElementById('result').value=result;
+            }
+            else if(opr=='-')
+            {
+                result=parseInt(one)-parseInt(two);
+                document.getElementById('result').value=result;
+            }
+            else if(opr=='*')
+            {
+                result=parseInt(one)*parseInt(two);  
+                document.getElementById('result').value=result;
+            }
+            else if(opr=='/')
+            {
+                result=parseInt(one)/parseInt(two);
+                document.getElementById('result').value=result;
+            }
+            else
+                document.getElementById('result').value="entre an operation"
+        }
+    </script>
+</html>

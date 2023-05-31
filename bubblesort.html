@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BUBBLE SORT</title>
+        <style>
+            body{
+                background-color: rgb(55, 53, 53);
+            }
+            .div1{
+                background-color: black;
+                color:green;
+                height: 100px;
+                text-align: center;
+                font-size: large;
+            }
+            .div2{
+                height:50px;
+                font-size: larger;
+                margin-top: 20px;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="div1">BUBBLE SORT</div>
+            <div class="div2"> ENTER ELEMENTS OF ARRAY</div>
+            <div style="height:100px">
+                <input type="" class="element">
+                <input type="" class="element">
+                <input type="" class="element">
+                <input type="" class="element">
+                <input type="" class="element">
+                <button onclick="bubbleSort()">SORT</button>
+            </div>
+            <div class="div2">SORTED ARRAY</div>
+            <div style="height:100px">
+                <input type="" class="output">
+                <input type="" class="output">
+                <input type="" class="output">
+                <input type="" class="output">
+                <input type="" class="output">
+            </div>
+
+        </body>
+        <script>
+            function bubbleSort(){
+                var arr=new Array();
+                for(var i=0;i<5;i++)
+                arr[i]=document.getElementsByClassName('element')[i].value;
+                for(var i=0;i<5;i++)
+                {
+                    for(var j=0;j<4;j++)
+                    {
+                        if(parseInt(arr[j])>parseInt(arr[j+1]))
+                        {
+                            var temp=arr[j];
+                            arr[j]=arr[j+1];
+                            arr[j+1]=temp;
+                        }
+                    }
+                }
+                for(i=0;i<5;i++)
+                document.getElementsByClassName('output')[i].value=arr[i];
+            }
+        </script>
+</html>

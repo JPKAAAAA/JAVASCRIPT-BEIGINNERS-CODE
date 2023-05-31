@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>array methods</title>
+        <style>
+            *{
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="res"></h1>
+        <button onclick="pops()">POP</button>
+        <button onclick="pushs()">PUSH</button>
+        <button onclick="slices()">SLICE</button>
+        <button onclick="reverses()">REVERSE</button>
+        <button onclick="shifts()">SHIFT</button>
+    </body>
+    <script>
+        var fruits = ["audi","bmw","ferrari","hundai","honda","maruti","ford"];
+        var demo=fruits;
+        document.getElementById('res').innerText=demo;
+        
+        function pops()
+        {
+            demo.pop();
+            document.getElementById('res').innerText=demo;
+        }
+
+        function pushs()
+        {
+            var name=prompt("enter fruit","");
+            demo.push(name);
+            document.getElementById('res').innerText=demo;
+        }
+
+        function slices()
+        {
+            var x=demo.slice(1);
+            document.getElementById('res').innerText=x;
+        }
+
+        function reverses()
+        {
+            demo.reverse();
+            document.getElementById('res').innerText=demo;
+        }
+
+        function shifts()
+        {
+            demo.shift();
+            document.getElementById('res').innerText=demo;
+
+        }
+    </script>
+</html>

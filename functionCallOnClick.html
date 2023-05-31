@@ -1,0 +1,26 @@
+<!-- this program shows how to call funtion on click in javaScript -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first</title>
+        <style>
+            *{
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <input type='text' id="first">
+        <button onclick="fun()">submit</button>
+        <div class="greet">Hello</div>
+        <div class="greet">GoodMorning EveryOne</div>
+    </body>
+    <script type="text/javaScript">
+        function fun() {
+        var name=document.getElementById("first").value;
+        document.getElementsByClassName('greet')[1].innerHTML="goodmorning "+name;
+        console.log(name);
+        }
+    </script>
+</html>

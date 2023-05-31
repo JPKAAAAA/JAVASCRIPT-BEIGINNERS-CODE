@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>try-Catch-finally</title>
+    </head>
+    <boby>
+        Enter a number <input type="" id="num">
+        <button onclick="test()">CLICK</button>
+        <h1 id="res"></h1>
+    </boby>
+    <script>
+        function test(){
+            var num=document.getElementById('num');
+            var data=num.value;
+            try{
+                if(isNaN(data))
+                {
+                    throw "This is not a number";
+                }
+                if(data<5||data>10)
+                {
+                    throw "Number is out of range";
+                }
+
+            }
+            catch(err){
+                    document.getElementById('res').innerText=err;
+            }
+            finally{
+                num.value="";
+            }    
+                
+        }
+    </script>
+</html>

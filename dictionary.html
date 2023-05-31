@@ -1,0 +1,19 @@
+<!-- how to create object a.k.a dictionary in javascript-->
+<!-- illustrate use of 'this' pointer inside object-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var person={
+                firstName: "suraj",
+                secondName: "jha",
+                fullName: function() {
+                    return this.firstName+this.secondName;
+                }
+            };
+            document.write(person.fullName());
+        </script>
+    </head>
+</html>

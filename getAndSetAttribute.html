@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>getAttribute and setAttribute</title>
+        <style>
+            label{
+                display:block;
+            }
+            div{
+                margin:10px;
+            }
+            form{
+                width: 350px;
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Login Form</legend>
+                <div>
+                    <label>User Name</label>
+                    <input type="text" name=""/>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="password" name=""/>
+                </div>
+                <div>
+                    <button type="button">LOGIN</button>
+                    <button type ="button" onclick="toggle(this)">Show Password</button>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+    <script>
+        var pass=document.getElementById('password');
+
+        function toggle(x)
+        {   var type=pass.getAttribute('type');
+            if(type==="password")
+            {  
+                pass.setAttribute("type","text");
+                x.innerText="Hide Password";
+                // document.getElementById('password').innerText="Hide Password";
+            }
+            else
+            {
+                pass.setAttribute("type","password");
+                x.innerText="Show Password";
+                // document.getElementById('password').innerText="Show Password";
+            }
+        }
+    </script>
+</html>
