@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white space validation using regExp</title>
+</head>
+<body>
+    <form> <fieldset>
+        <legend>registration form</legend>
+            <label>username</label>
+            <input id="username" type="text" onkeyup="check(this.value)">
+            <label>password</label>
+            <input id="password" type="password" onkeyup="check(this.value)">
+            <label>confirm password</label>
+            <input id="confirm" type="password" onkeyup="check(this.value)">
+            <error id="alert"></error>
+            <input type="submit" value="SUBMIT">
+        
+    </fieldset>
+    </form>
+</body>
+<script>
+    var patt=/\s/;
+    var alert=document.getElementById('alert');
+    function check(data){
+        var isSpace=patt.test(data);
+        if(isSpace){
+        alert.innerText="Space is not allowed";
+        }
+        else
+        {
+        alert.innerText="";
+        }
+    }
+</script>
+</html>
